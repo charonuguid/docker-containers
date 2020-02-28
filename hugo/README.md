@@ -43,3 +43,27 @@ Hugo may also be compiled from source wherever the Go compiler tool chain can ru
 This was created to be used to run on Visual Studio Code as part of the IDE's Remote Containers development feature. But it should not stop you from using this for anything else.
 
 This container uses the `extended` version of Hugo v0.65.3
+
+## Using This Container
+
+To generate a new site:
+
+```
+docker run -it --rm -v $PWD:/source headgeekette/hugo-docker new site ${NAME_OF_SITE}
+```
+
+To generate a new post:
+
+```
+docker run --rm -v $PWD:/source headgeekette/hugo-docker new ${NAME_OF_POST}
+```
+
+You might have to change ownership and group in order to edit the necessary files after creating a new site and/or new post.
+
+When running as a server, do not forget to specify the base url and bind to 0.0.0.0.
+
+```
+docker run --rm -p 1313:1313 -v `pwd`:/source headgeekette/hugo-docker \
+     server \
+    -b http://localhost:1313 --bind=0.0.0.0
+```
