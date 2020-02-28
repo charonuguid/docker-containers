@@ -38,76 +38,8 @@ Hugo may also be compiled from source wherever the Go compiler tool chain can ru
 
 **Complete documentation is available at [Hugo Documentation][].**
 
-## Choose How to Install
+## About This Container
 
-If you want to use Hugo as your site generator, simply install the Hugo binaries.
-The Hugo binaries have no external dependencies.
+This was created to be used to run on Visual Studio Code as part of the IDE's Remote Containers development feature. But it should not stop you from using this for anything else.
 
-To contribute to the Hugo source code or documentation, you should [fork the Hugo GitHub project](https://github.com/gohugoio/hugo#fork-destination-box) and clone it to your local machine.
-
-Finally, you can install the Hugo source code with `go`, build the binaries yourself, and run Hugo that way.
-Building the binaries is an easy task for an experienced `go` getter.
-
-### Install Hugo as Your Site Generator (Binary Install)
-
-Use the [installation instructions in the Hugo documentation](https://gohugo.io/overview/installing/).
-
-### Build and Install the Binaries from Source (Advanced Install)
-
-Add Hugo and its package dependencies to your go `src` directory.
-
-    go get -v github.com/gohugoio/hugo
-
-Once the `get` completes, you should find your new `hugo` (or `hugo.exe`) executable sitting inside `$GOPATH/bin/`.
-
-To update Hugo’s dependencies, use `go get` with the `-u` option.
-
-    go get -u -v github.com/gohugoio/hugo
-	
-## The Hugo Documentation
-
-The Hugo documentation now lives in its own repository, see https://github.com/gohugoio/hugoDocs. But we do keep a version of that documentation as a `git subtree` in this repository. To build the sub folder `/docs` as a Hugo site, you need to clone this repo:
-
-```bash
-git clone git@github.com:gohugoio/hugo.git
-```
-## Contributing to Hugo
-
-For a complete guide to contributing to Hugo, see the [Contribution Guide](CONTRIBUTING.md).
-
-We welcome contributions to Hugo of any kind including documentation, themes,
-organization, tutorials, blog posts, bug reports, issues, feature requests,
-feature implementations, pull requests, answering questions on the forum,
-helping to manage issues, etc.
-
-The Hugo community and maintainers are [very active](https://github.com/gohugoio/hugo/pulse/monthly) and helpful, and the project benefits greatly from this activity.
-
-### Asking Support Questions
-
-We have an active [discussion forum](https://discourse.gohugo.io) where users and developers can ask questions.
-Please don't use the GitHub issue tracker to ask questions.
-
-### Reporting Issues
-
-If you believe you have found a defect in Hugo or its documentation, use
-the GitHub issue tracker to report the problem to the Hugo maintainers.
-If you're not sure if it's a bug or not, start by asking in the [discussion forum](https://discourse.gohugo.io).
-When reporting the issue, please provide the version of Hugo in use (`hugo version`).
-
-### Submitting Patches
-
-The Hugo project welcomes all contributors and contributions regardless of skill or experience level.
-If you are interested in helping with the project, we will help you with your contribution.
-Hugo is a very active project with many contributions happening daily.
-
-Because we want to create the best possible product for our users and the best contribution experience for our developers,
-we have a set of guidelines which ensure that all contributions are acceptable.
-The guidelines are not intended as a filter or barrier to participation.
-If you are unfamiliar with the contribution process, the Hugo team will help you and teach you how to bring your contribution in accordance with the guidelines.
-
-For a complete guide to contributing code to Hugo, see the [Contribution Guide](CONTRIBUTING.md).
-
-[![Analytics](https://ga-beacon.appspot.com/UA-7131036-6/hugo/readme)](https://github.com/igrigorik/ga-beacon)
-
-[Go]: https://golang.org/
-[Hugo Documentation]: https://gohugo.io/overview/introduction/
+This container uses the `extended` version of Hugo v0.65.3
